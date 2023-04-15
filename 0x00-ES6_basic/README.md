@@ -1,223 +1,6 @@
-Project: 0x00. ES6 Basics | Lagos Intranet          Cookies.set('timezone', (new Date()).getTimezoneOffset() / -60.0);  
-
-Toggle navigation[
-
-](/)
-
-*   [
-    
-    My Planning
-    
-    ](/planning/me)
-*   [
-    
-    Projects
-    
-    ](/projects/current)
-*   [
-    
-    QA Reviews I can make
-    
-    ](/corrections/to_review)
-*   [
-    
-    Evaluation quizzes
-    
-    ](/dashboards/my_current_evaluation_quizzes)
-
-* * *
-
-*   [
-    
-    Curriculums
-    
-    ](/dashboards/my_curriculums)
-*   [
-    
-    Concepts
-    
-    ](/concepts)
-*   [
-    
-    Conference rooms
-    
-    ](/dashboards/video_rooms)
-*   [
-    
-    Servers
-    
-    ](/servers)
-*   [
-    
-    Sandboxes
-    
-    ](/user_containers/current)
-*   [
-    
-    Tools
-    
-    ](/dashboards/my_tools)
-*   [
-    
-    Video on demand
-    
-    ](/dashboards/videos)
-
-* * *
-
-*   [
-    
-    Peers
-    
-    ](/users/peers)
-*   [
-    
-    Captain's Logs
-    
-    ](/dashboards/my_captain_log)
-
-* * *
-
-*   [
-    
-    Slack
-    
-    ](https://alx-students.slack.com)
-    
-    [
-    
-    My Profile
-    
-    ](/users/my_profile)
-    
-
-[
-
-](/)
-
-*   [
-    
-    My Planning
-    
-    ](/planning/me)
-*   [
-    
-    Projects
-    
-    ](/projects/current)
-*   [
-    
-    QA Reviews I can make
-    
-    ](/corrections/to_review)
-*   [
-    
-    Evaluation quizzes
-    
-    ](/dashboards/my_current_evaluation_quizzes)
-
-* * *
-
-*   [
-    
-    Curriculums
-    
-    ](/dashboards/my_curriculums)
-*   [
-    
-    Concepts
-    
-    ](/concepts)
-*   [
-    
-    Conference rooms
-    
-    ](/dashboards/video_rooms)
-*   [
-    
-    Servers
-    
-    ](/servers)
-*   [
-    
-    Sandboxes
-    
-    ](/user_containers/current)
-*   [
-    
-    Tools
-    
-    ](/dashboards/my_tools)
-*   [
-    
-    Video on demand
-    
-    ](/dashboards/videos)
-
-* * *
-
-*   [
-    
-    Peers
-    
-    ](/users/peers)
-*   [
-    
-    Captain's Logs
-    
-    ](/dashboards/my_captain_log)
-
-* * *
-
-*   [
-    
-    Slack
-    
-    ](https://alx-students.slack.com)
-    
-    [
-    
-    My Profile
-    
-    ](/users/my_profile)
-    
-
-Curriculum
-
-Short Specializations Average: 73.19%
-
-*   [
-    
-    Foundations Average: 101.16%
-    
-    
-    
-    ](/curriculums/1/observe)
-*   [
-    
-    Short Specializations Average: 73.19%
-    
-    
-    
-    ](/curriculums/17/observe)
-
-[
-
-You have a captain's log due before 2023-04-16 (in 1 day)! Log it now!
-
-](/captain_logs/2805321/edit)
 
 0x00. ES6 Basics
 ================
-
-#### In a nutshell…
-
-*   **Auto QA review:** 26.65/41 mandatory & 2.0/4 optional
-*   **Altogether:**  **97.5%**
-    *   Mandatory: 65.0%
-    *   Optional: 50.0%
-    *   Calculation:  65.0% + (65.0% \* 50.0%)  == **97.5%**
-
 ### Concepts
 
 _For this project, we expect you to look at these concepts:_
@@ -225,11 +8,7 @@ _For this project, we expect you to look at these concepts:_
 *   [Modern Javascript](/concepts/541)
 *   [Software Linter](/concepts/542)
 
-![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/12/08806026ef621f900121.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230415%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230415T114613Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=fdcf3b8ddd284d89c1cd384081882829146a8811a376ae2626a4d3fd0949a9e8)
-
-Resources
----------
-
+![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/12/08806026ef621f900121.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230415%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230415T114613Z&X
 **Read or watch**:
 
 *   [ECMAScript 6 - ECMAScript 2015](/rltoken/NW1dFLFExQ12_hD8yvkV3A "ECMAScript 6 - ECMAScript 2015")
@@ -253,7 +32,6 @@ At the end of this project, you are expected to be able to [explain to anyone](/
 *   String templating in ES6
 *   Object creation and their properties in ES6
 *   Iterators and for-of loops
-
 Requirements
 ------------
 
@@ -861,6 +639,10 @@ Execution:
       'l', 'l', 'o'
     ]
     bob@dylan:~$
+
+
+
+
 
 
 
