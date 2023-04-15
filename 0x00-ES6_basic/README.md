@@ -1,16 +1,7 @@
 div class="project row">
 
 0x00. ES6 Basics
-================
-
-#### In a nutshell…
-
-*   **Auto QA review:** 26.65/41 mandatory & 2.0/4 optional
-*   **Altogether:**  **97.5%**
-    *   Mandatory: 65.0%
-    *   Optional: 50.0%
-    *   Calculation:  65.0% + (65.0% \* 50.0%)  == **97.5%**
-
+=================
 ### Concepts
 
 _For this project, we expect you to look at these concepts:_
