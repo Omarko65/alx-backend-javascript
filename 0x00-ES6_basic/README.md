@@ -1,5 +1,3 @@
-div class="project row">
-
 0x00. ES6 Basics
 =================
 ### Concepts
