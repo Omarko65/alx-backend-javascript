@@ -7,12 +7,7 @@ interface Teacher {
     [propName:string]: any;
 }
 
-const teacher3: Teacher = {
-    firstName: 'John',
-    lastName: 'Doe',
-    fullTimeEmployee: false,
-    location: 'London',
-    contract: false,
-};
+interface Directors extends Teacher {
+    numberOfReports: number;
+}
 
-console.log(teacher3);
