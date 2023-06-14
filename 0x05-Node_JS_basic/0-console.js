@@ -1,7 +1,5 @@
-// prints to STOUT
-const displayMessage = (d) => {
-  // function reads what is passed to d to stdout
-  process.stdout.write(d + '\n');
-};
+function displayMessage(d) {
+  console.log(d)
+}
 
 module.exports = displayMessage;
