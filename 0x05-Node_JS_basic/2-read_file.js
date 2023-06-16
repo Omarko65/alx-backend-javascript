@@ -1,59 +1,30 @@
 const fs = require('fs');
 
-
-function countStudents(file) {
+function countStudents(path) {
   try {
-    let cs = 0;
-    let swe = 0;
-    const cs_names = [];
-    const swe_names = [];
+    const data = fs.readFileSync(path, { encoding: 'utf8' });
 
-    const database = fs.readFileSync(file, 'utf-8');
+    const lines = data.trim().split('\n');
+    const students = lines.slice(1).filter((line) => line.trim().length > 0).map((line) => line.split(','));
 
-    database.split(/\r?\n/).forEach(line => {
-    databaseContent = line.split(',');
-      databaseContent.forEach((data) => {
-        if ('CS' === data) {
-          cs = cs + 1;
-          cs_names.push(databaseContent[0]);
-        } else if ('SWE' === data) {
-          swe = swe + 1;
-          swe_names.push(databaseContent[0]);
-        } else {
-          swe = swe + 0;
-        }
-      });
-    });
-  
-    const students = cs + swe;
-    let i = 0;
-    let lent = cs_names.length;
+    const fieldCounts = {};
+    students.forEach((student) => {
+      const [firstName,,, field] = student;
 
-    console.log('Number of students: ' + students);
-    process.stdout.write(`Number of students in CS: ${cs}. List: `);
-
-    cs_names.forEach((name) => {
-      i = i + 1;
-      process.stdout.write(name);
-      if ( i != lent) {
-        process.stdout.write(', ');
+      if (!fieldCounts[field]) {
+        fieldCounts[field] = { count: 0, names: [] };
       }
+
+      /* eslint-disable no-plusplus */
+      fieldCounts[field].count++;
+      fieldCounts[field].names.push(firstName);
     });
 
-    process.stdout.write('\n');
-    lent = swe_names.length;
-    i = 0;
+    console.log(`Number of students: ${students.length}`);
 
-    process.stdout.write(`Number of students in SWE: ${swe}. List: `);
-    swe_names.forEach((name) => {
-      i = i + 1;
-      process.stdout.write(name);
-      if ( i != lent) {
-        process.stdout.write(', ');
-      }
+    Object.keys(fieldCounts).forEach((field) => {
+      console.log(`Number of students in ${field}: ${fieldCounts[field].count}. List: ${fieldCounts[field].names.join(', ')}`);
     });
-
-    process.stdout.write('\n');
   } catch (error) {
     throw new Error('Cannot load the database');
   }
