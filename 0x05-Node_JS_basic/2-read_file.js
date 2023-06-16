@@ -1,30 +1,35 @@
 const fs = require('fs');
 
-function countStudents(path) {
+
+function countStudents(file) {
   try {
-    const data = fs.readFileSync(path, { encoding: 'utf8' });
+    let cs = 0;
+    let swe = 0;
+    const cs_names = [];
+    const swe_names = [];
 
-    const lines = data.trim().split('\n');
-    const students = lines.slice(1).filter((line) => line.trim().length > 0).map((line) => line.split(','));
+    const database = fs.readFileSync(file, 'utf-8');
 
-    const fieldCounts = {};
-    students.forEach((student) => {
-      const [firstName,,, field] = student;
-
-      if (!fieldCounts[field]) {
-        fieldCounts[field] = { count: 0, names: [] };
-      }
-
-      /* eslint-disable no-plusplus */
-      fieldCounts[field].count++;
-      fieldCounts[field].names.push(firstName);
+    database.split(/\r?\n/).forEach(line => {
+    databaseContent = line.split(',');
+      databaseContent.forEach((data) => {
+        if ('CS' === data) {
+          cs = cs + 1;
+          cs_names.push(databaseContent[0]);
+        } else if ('SWE' === data) {
+          swe = swe + 1;
+          swe_names.push(databaseContent[0]);
+        } else {
+          swe = swe + 0;
+        }
+      });
     });
-
-    console.log(`Number of students: ${students.length}`);
-
-    Object.keys(fieldCounts).forEach((field) => {
-      console.log(`Number of students in ${field}: ${fieldCounts[field].count}. List: ${fieldCounts[field].names.join(', ')}`);
-    });
+  
+    const students = cs + swe;
+  
+    console.log('Number of students: ' + students);
+    console.log(`Number of students in CS: ${cs}. List: ${cs_names.join(', ')}`);
+    console.log(`Number of students in SWE: ${swe}. List: ${swe_names.join(', ')}`);
   } catch (error) {
     throw new Error('Cannot load the database');
   }
