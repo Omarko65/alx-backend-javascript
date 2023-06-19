@@ -18,10 +18,10 @@ class StudentsController {
 
   static getAllStudentsByMajor(req, res) {
     const field = req.params.major;
-    if (field == 'CS' || field == 'SWE') {
+    if (field === 'CS' || field === 'SWE') {
       if (process.argv[2]) {
         readDatabase(process.argv[2].toString()).then((data) => {
-          if (field == 'CS') {
+          if (field === 'CS') {
             const firstList = data.csFirst;
             res.status(200).send(`List: ${firstList.join(', ')}`);
           } else {
